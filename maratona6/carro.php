@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../maratona6//css//style.css" type="text/css">
+    <link rel="stylesheet" href="../maratona6//css//carro.css" type="text/css">
 </head>
 <body>
     <h1>Modelos de carros</h1>
@@ -14,6 +14,7 @@
    <a href="http://localhost/maratona6/aluno.php">Notas dos Alunos</a>
 </div>
 
+<div class="botao">
 <form method="POST">
         <label for="carroSelect">Selecione um carro:</label>
         <select name="carroSelect">
@@ -24,7 +25,9 @@
         </select>
         <button type="submit">Ver Detalhes</button>
     </form>
+    </div>
 
+   <div class="botao">
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST["carroSelect"])) {
         $selecionado = $_POST["carroSelect"];
@@ -45,8 +48,8 @@
         }
     }
     ?>
+    </div>
 
-<footer>
-</footer>
+
 </body>
 </html>

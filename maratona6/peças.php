@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../maratona6//css//style.css" type="text/css">
+    <link rel="stylesheet" href="../maratona6//css//peças.css" type="text/css">
     
 </head>
 <body>
@@ -17,6 +17,7 @@
 <a href="http://localhost/maratona6/aluno.php">Notas dos Alunos</a>
 </div>
 
+<div class="botao1">
 <form method="POST">
     <label for="acessorios">Qual peça você precisa?</label>
     <select name="acessorios[]" multiple>
@@ -28,7 +29,8 @@
     <br>
     <input type="submit" value="Mostrar Especificações">
 </form>
-
+</div>
+<div class="botao1">
 <?php 
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["acessorios"])) {
         
@@ -43,13 +45,17 @@
     
         foreach ($_POST["acessorios"] as $peca) {
             if (isset($especificacoes[$peca])) {
-                echo "<li><strong>" . ucfirst($peca) . ":</strong> " . $especificacoes[$peca] . "</li>";
+                echo "<ul><strong>" . ucfirst($peca) . ":</strong> " . $especificacoes[$peca] . "</ul>";
             }
         }
     
         echo "</ul>";
     }
     ?>
+</div>
+
+    <div class="botao1">
     <input type="submit" value="comprar">
+    </div>
 </body>
 </html>

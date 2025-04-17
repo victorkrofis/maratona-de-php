@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../maratona6//css//style.css" type="text/css">
+    <link rel="stylesheet" href="../maratona6//css//aluno.css" type="text/css">
 </head>
 <body>
     <h1>Notas dos Alunos</h1>
@@ -12,7 +12,7 @@
     <a href="http://localhost/maratona6/pe%c3%a7as.php">Peças de carros</a>
     </div>
 
-
+<div class="botao2">
 <form action="" method="POST">
     <div>
         <label for="nota">Nota:</label>
@@ -20,7 +20,9 @@
     </div>
     <input type="submit" value="Enviar">
 </form>
+</div>
 
+<div class="botao2">
 <?php 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!isset($_POST["nota"]) || !is_numeric($_POST["nota"])) {
@@ -42,5 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+</div>
+
 </body>
 </html>
